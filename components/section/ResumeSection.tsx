@@ -13,8 +13,8 @@ export const ResumeSection = () => {
       id='resume'
       initial='hidden'
       whileInView='visible'
-      viewport={{ once: true, amount: 0.3 }}
-      variants={staggerContainer(0)}
+      viewport={{ once: true, amount: 0.1 }}
+      variants={staggerContainer(0.5)}
       className='mt-30 scroll-mt-24'
     >
       <SectionHeader

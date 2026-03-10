@@ -18,7 +18,7 @@ export const ProjectSection = () => {
     >
       
       {/* Header + See All */}
-      <div className="flex items-end justify-between">
+      <div className="flex flex-col justify-between gap-3">
         <SectionHeader
           subtitle='Projects'
           title='My Featured Projects'
