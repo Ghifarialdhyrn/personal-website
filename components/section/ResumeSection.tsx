@@ -7,7 +7,6 @@ import { education, experience, tools } from '@/constants';
 import { ToolsCard } from '../cards/ToolsCard';
 import { ExpCard } from '../cards/ExpCard';
 
-
 export const ResumeSection = () => {
   return (
     <motion.section
@@ -25,10 +24,25 @@ export const ResumeSection = () => {
 
       <motion.p
         variants={fadeUp}
-        className='mt-4 text-neutral-300'
+        className='mt-4 text-neutral-300 text-justify'
       >
-        with a backgorund in Computer Science and hands-on experience in design
-        and front-end development ......
+        with a background in Computer Science
+        and hands-on experience in web development, I have developed strong
+        technical and problem-solving skills through both academic learning and
+        real-world projects. My educational journey has provided a solid
+        foundation in software engineering, programming, and web technologies,
+        while practical experiences such as internships and personal projects
+        have allowed me to apply these concepts in real applications. During my
+        learning process, I have built responsive and dynamic web interfaces
+        using modern technologies such as React.js, HTML, CSS, JavaScript, and
+        Tailwind CSS. I also have experience developing backend services using
+        Express.js and PHP, enabling me to create and integrate RESTful APIs
+        with frontend applications. Beyond web development, I continuously
+        explore creative skills such as video editing and content creation using
+        tools like CapCut, combining technical knowledge with creativity to
+        produce engaging digital content. Through education and practical
+        experience, I strive to continuously improve my skills and contribute to
+        building modern, user-friendly digital solutions.
       </motion.p>
 
       <div className='grid gap-x-10 my-16 md:grid-cols-2'>

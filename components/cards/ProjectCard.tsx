@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'motion/react';
 import type { ProjectType } from '@/types';
 import { fadeUp } from '@/lib/animations';
@@ -6,14 +8,13 @@ export const ProjectCard = ({
   imgSrc,
   tags,
   title,
+  projectLink,
 }: ProjectType) => {
   return (
     <motion.div variants={fadeUp} className="relative">
 
-      {/* Image Wrapper */}
+      {/* Image */}
       <div className="relative group overflow-hidden rounded-md">
-
-        {/* Image */}
         <img
           src={imgSrc}
           alt={title}
@@ -22,25 +23,38 @@ export const ProjectCard = ({
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-
-          {/* Title Center */}
           <h3 className="text-white text-2xl font-semibold tracking-wide transform translate-y-6 group-hover:translate-y-0 transition duration-300">
             {title}
           </h3>
-
         </div>
-
       </div>
-      
+
+      {/* Tags */}
       <div className="mt-3 flex gap-2 flex-wrap">
-        {tags.map((tag, i) => (
-          <span
-            key={i}
-            className="bg-background hover:bg-primary hover:text-black py-1 px-2 rounded-sm text-sm cursor-pointer"
-          >
-            {tag}
-          </span>
-        ))}
+        {tags.map((tag, i) => {
+          if (tag === 'Demo' || 'Video') {
+            return (
+              <a
+                key={i}
+                href={projectLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-background hover:bg-primary hover:text-black py-1 px-2 rounded-sm text-sm cursor-pointer"
+              >
+                {tag}
+              </a>
+            );
+          }
+
+          return (
+            <span
+              key={i}
+              className="bg-background hover:bg-primary hover:text-black py-1 px-2 rounded-sm text-sm cursor-pointer"
+            >
+              {tag}
+            </span>
+          );
+        })}
       </div>
 
     </motion.div>
